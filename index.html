@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quieres ser mi novia?</title>
+
+    <!-- Creamos las funciones dentro del script -->
+    <script>
+        function Si() {
+            rspA = "Sabia que dirias que si, Te Amo ❤";
+            rspB = "Eres el CSS de mi vida bb";
+
+            document.getElementById("ResultadoA").innerHTML = rspA
+            document.getElementById("ResultadoB").innerHTML = rspB
+        }
+
+        function No() {
+            ancho = window.innerWidth;
+            alto = window.innerHeight;
+
+            x = (Math.random() * ancho) + "px";
+            y = (Math.random() * alto) + "px";
+
+            document.getElementById('btnNo').style.position = "absolute";
+            document.getElementById('btnNo').style.left = x;
+            document.getElementById('btnNo').style.top = y;
+
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Covered+By+Your+Grace&family=Kalam:wght@700&family=Roboto:wght@100&family=Sono:wght@500;800&display=swap');
+
+        html, body {
+            font-family: 'Caveat', cursive;
+        }
+
+        body {
+            background: linear-gradient(to right, #5433FF, hsl(146, 98%, 82%));
+            text-align: center;
+        }
+
+        body a {
+            font-size: 40px;
+            padding: 15px;
+            border-radius: 20%;
+            background-color: #ffa851c5;
+            border: none;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        body p {
+            color: white;
+            font-size: 40px;
+        }
+
+        body p:hover{
+            text-shadow: 0 0 5px #20BDFF, 0 0 15px #20BDFF, 0 0 30px #20BDFF, 0 0 50px #20BDFF;
+        }
+         body h1 {
+            font-size: 80px;
+            border-radius: 15px;
+            padding: 10px;
+            box-shadow: 3px 3px #000, 5px 0 1em #000;
+         }
+    </style>
+
+
+</head>
+<body>
+    <div>
+        <h1>¿Quieres ser mi novia?</h1>
+        <a id="btnSi" onclick="Si()">SI</a>
+        <a id="btnNo" onmouseover="No()">NO</a>
+
+        <p id="ResultadoA"></p>
+        <p id="ResultadoB"></p>
+    </div>
+</body>
+</html>
